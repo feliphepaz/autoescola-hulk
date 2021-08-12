@@ -195,12 +195,16 @@ img {
   padding: 40px 0;
 }
 
+.logo {
+  max-width: initial;
+}
+
 .menu {
   display: flex;
 }
 
 .menu li {
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .menu li:last-child {
@@ -248,6 +252,43 @@ img {
   color: var(--primary);
 }
 
+@media (max-width: 1320px) {
+  .menu {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .menu li + li {
+    margin-top: 20px;
+  }
+
+  .btns {
+    display: flex !important;
+  }
+
+  .logo {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 805px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .header .container {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-right: 0px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 /* BENEFITS */
 
 .benefits .container {
@@ -256,6 +297,10 @@ img {
 
 .benefits {
   margin: 145px 0px;
+}
+
+.benefits li + li {
+  margin-left: 40px;
 }
 
 .benefits .container li h3 {
@@ -269,6 +314,17 @@ img {
   margin: 0 auto;
 }
 
+@media (max-width: 590px) {
+  .benefits .container {
+    flex-direction: column;
+  }
+
+  .benefits li + li {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+}
+
 /* ABOUT */
 
 .about-home-text {
@@ -276,7 +332,7 @@ img {
   width: 40%;
 }
 
-.about-home img {
+.about-home-img {
   width: 60%;
 }
 
@@ -284,7 +340,27 @@ img {
   margin-bottom: 145px;
 }
 
-/* DEPO */
+@media (max-width: 920px) {
+  .about-home {
+    flex-direction: column;
+  }
+
+  .about-home-text {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .about-home-img {
+    width: 100%;
+  }
+}
+
+/* CTA */
 
 .call-to-action {
   background: var(--primary);
@@ -293,12 +369,32 @@ img {
 
 .call-to-action p {
   color: var(--base);
+  margin: 0 auto;
   text-align: center;
 }
 
-.call-to-action div {
-  display: table;
-  margin: 30px auto 0px auto;
+.call-to-action .container {
+  flex-direction: column;
+}
+
+.call-to-action .btns {
+  margin-top: 20px !important;
+  margin: 0 auto;
+}
+
+@media (max-width: 350px) {
+  .call-to-action .btns {
+    flex-direction: column;
+  }
+
+  .call-to-action .btn {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .call-to-action .btn:last-child {
+    margin-bottom: 0px;
+  }
 }
 
 /* DEPOIMENTO */
