@@ -183,6 +183,54 @@ img {
   text-decoration: underline;
 }
 
+.btn {
+  border: 4px solid var(--secundary);
+  background: var(--primary);
+  color: var(--secundary);
+  font-family: var(--font);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 150px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.btn {
+  margin-right: 20px;
+}
+
+.btn:last-child {
+  margin-right: 0px;
+}
+
+.btn:hover {
+  color: var(--base);
+  border: 4px solid var(--base);
+  transition: 0.3s;
+}
+
+.cta {
+  background: var(--secundary);
+  color: var(--primary);
+}
+
+@media (max-width: 350px) {
+  .btns {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .btn:last-child {
+    margin-bottom: 0px;
+  }
+}
+
 /* HEADER */
 
 .header .container {
@@ -217,39 +265,6 @@ img {
   color: var(--base);
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.btn {
-  border: 4px solid var(--secundary);
-  background: var(--primary);
-  color: var(--secundary);
-  font-family: var(--font);
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 10px;
-  border-radius: 20px;
-  max-width: 150px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.btn {
-  margin-right: 20px;
-}
-
-.btn:last-child {
-  margin-right: 0px;
-}
-
-.btn:hover {
-  color: var(--base);
-  border: 4px solid var(--base);
-  transition: 0.3s;
-}
-
-.cta {
-  background: var(--secundary);
-  color: var(--primary);
 }
 
 @media (max-width: 1320px) {
@@ -382,21 +397,6 @@ img {
   margin: 0 auto;
 }
 
-@media (max-width: 350px) {
-  .call-to-action .btns {
-    flex-direction: column;
-  }
-
-  .call-to-action .btn {
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
-
-  .call-to-action .btn:last-child {
-    margin-bottom: 0px;
-  }
-}
-
 /* DEPOIMENTO */
 
 .depo {
@@ -480,6 +480,25 @@ img {
   font-weight: 400;
 }
 
+@media (max-width: 500px) {
+  .depo ul li {
+    width: 100%;
+  }
+  .depo ul {
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .depo ul li {
+    width: 100%;
+    padding: 20px;
+  }
+  .depo ul {
+    margin: 0px 20px;
+  }
+}
+
 /* INSTAGRAM */
 
 .text-insta {
@@ -530,6 +549,52 @@ img {
   margin-bottom: 145px;
 }
 
+@media (max-width: 900px) {
+  .instagram-home {
+    flex-direction: column;
+  }
+
+  .slide-insta {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .text-insta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .slide-insta {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .prev,
+  .next {
+    padding: 5px;
+  }
+  .slide-insta {
+    padding: 10px;
+  }
+  .slide-insta li a img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 290px) {
+  .slide-insta li p {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 260px) {
+  .slide-insta li p {
+    display: none;
+  }
+}
+
 /* FOOTER */
 
 .footer {
@@ -539,6 +604,7 @@ img {
 
 .menu-footer {
   display: flex;
+  margin-right: 20px;
 }
 
 .menu-footer ul + ul {
@@ -547,6 +613,10 @@ img {
 
 .menu-footer ul li + li {
   margin-top: 20px;
+}
+
+.data-footer {
+  margin-right: 20px;
 }
 
 .data-footer > a {
@@ -587,6 +657,58 @@ img {
   font-size: 1.125em !important;
 }
 
+@media (max-width: 1100px) {
+  .menu-footer ul + ul {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .menu-footer ul + ul {
+    margin-left: 60px;
+  }
+
+  .data-footer {
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+
+  .menu-footer {
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer .container {
+    align-items: flex-start;
+  }
+  .menu-footer {
+    flex-direction: column;
+  }
+  .menu-footer ul + ul {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .data-footer {
+    margin-right: 20px;
+    margin-right: 20px;
+    width: 100%;
+  }
+
+  .data-footer > a {
+    width: 100%;
+    word-wrap: break-word;
+  }
+}
+
 /* COPY */
 
 .copy p {
@@ -594,5 +716,5 @@ img {
   color: var(--primary);
   font-size: 0.75em;
   text-align: center;
-  padding: 10px 0px;
+  padding: 10px 20px;
 }
