@@ -1,0 +1,33 @@
+.benefits .container {
+  justify-content: space-between;
+}
+
+.benefits {
+  margin: 145px 0px;
+}
+
+.benefits li + li {
+  margin-left: 40px;
+}
+
+.benefits .container li h3 {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.benefits .container li img {
+  margin: 0 auto;
+}
+
+@media (max-width: 590px) {
+  .benefits .container {
+    flex-direction: column;
+  }
+
+  .benefits li + li {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+}

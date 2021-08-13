@@ -1,0 +1,19 @@
+.call-to-action {
+  background: var(--primary);
+  padding: 60px 0;
+}
+
+.call-to-action p {
+  color: var(--base);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.call-to-action .container {
+  flex-direction: column;
+}
+
+.call-to-action .btns {
+  margin-top: 20px !important;
+  margin: 0 auto;
+}

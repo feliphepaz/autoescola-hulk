@@ -1,0 +1,7 @@
+.copy p {
+  background: var(--secundary);
+  color: var(--primary);
+  font-size: 0.75em;
+  text-align: center;
+  padding: 10px 20px;
+}

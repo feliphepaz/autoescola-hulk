@@ -1,0 +1,32 @@
+.about-home-text {
+  margin-right: 100px;
+  width: 40%;
+}
+
+.about-home-img {
+  width: 60%;
+}
+
+.about-home {
+  margin-bottom: 145px;
+}
+
+@media (max-width: 920px) {
+  .about-home {
+    flex-direction: column;
+  }
+
+  .about-home-text {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .about-home-img {
+    width: 100%;
+  }
+}
