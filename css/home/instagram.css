@@ -46,6 +46,35 @@
   margin-bottom: 145px;
 }
 
+.loading {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+  font-size: 1em !important;
+  display: block;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 400ms infinite;
+  animation: ellipsis steps(4, end) 400ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1rem;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1rem;
+  }
+}
+
 @media (max-width: 900px) {
   .instagram-home {
     flex-direction: column;

@@ -62,6 +62,10 @@ export default function api(postsNumber) {
     "IGQVJYZAU9yc1lKc3JVb2FtYS1nbTkyTFJ0bnB5cHdJTWhQNnpqN0lNSGlsMV9DWEphdWM0UVZAmbEs3N3JiejhaMGh5cWhqRlRmb01YYUNVQldXTnZALU0s2SHpRUEdXRjBPVGtpMFZAzVDlkMms3MXJaVwZDZD";
 
   async function fetchInsta() {
+    textInsta.forEach((txt) => {
+      txt.innerText = "Carregando";
+      txt.classList.add("loading");
+    });
     const response = await fetch(
       `https://graph.instagram.com/me/media?access_token=${token}&fields=media_url,media_type,caption,permalink`
     );
@@ -73,6 +77,7 @@ export default function api(postsNumber) {
       img.src = resolve.data[index].media_url;
     });
     textInsta.forEach((txt, index) => {
+      txt.classList.remove("loading");
       txt.innerHTML = resolve.data[index].caption;
       if (txt.innerHTML.length > 200) {
         txt.innerHTML =
