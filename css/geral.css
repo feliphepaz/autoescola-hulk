@@ -70,11 +70,11 @@ img {
   cursor: pointer;
 }
 
-.btn {
+.btn-a {
   margin-right: 20px;
 }
 
-.btn:last-child {
+.btn-a:last-child {
   margin-right: 0px;
 }
 
@@ -94,12 +94,12 @@ img {
     flex-direction: column;
   }
 
-  .btn {
+  .btn-a {
     margin-right: 0px;
     margin-bottom: 20px;
   }
 
-  .btn:last-child {
+  .btn-a:last-child {
     margin-bottom: 0px;
   }
 }
