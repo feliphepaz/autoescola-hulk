@@ -89,6 +89,25 @@ img {
   color: var(--primary);
 }
 
+[data-semana]::before {
+  display: inline-block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #e54;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid var(--primary);
+}
+
+[data-semana].aberto::before {
+  background: var(--secundary);
+}
+
+[data-semana].not-day::before {
+  display: none;
+}
+
 @media (max-width: 350px) {
   .btns {
     flex-direction: column;
