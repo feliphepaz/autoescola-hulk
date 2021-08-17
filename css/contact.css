@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+.contact .container > .text {
+  text-align: center;
+}
+
 .contact-content {
   margin-top: 100px;
 }
@@ -54,4 +58,64 @@
 .form .btn {
   max-width: 100%;
   padding: 20px 0px;
+}
+
+.form textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+.contact-content .container {
+  flex-direction: row;
+}
+
+.contact-gap {
+  margin-top: 40px;
+}
+
+.contact-more {
+  width: 40%;
+}
+
+.contact-more .title {
+  text-align: start;
+}
+
+.contact-more .social-footer {
+  margin-top: 0px;
+}
+
+@media (max-width: 1100px) {
+  .form {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 805px) {
+  .contact-content .container {
+    flex-direction: column;
+  }
+  .form {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .contact-more {
+    width: 100%;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form {
+    padding: 20px;
+  }
+
+  .contact-content .link-post {
+    word-wrap: break-word;
+  }
+
+  .form .btn {
+    word-wrap: break-word;
+  }
 }
