@@ -46,3 +46,40 @@
 .local + .local {
   margin-top: 145px;
 }
+
+@media (max-width: 900px) {
+  .local .title {
+    text-align: center;
+  }
+  .unidade-container {
+    flex-direction: column;
+  }
+
+  .unidade-container-img {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .unidade-container-img img {
+    margin: 0 auto;
+  }
+
+  .unidade-container-dados {
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
+    margin-top: 40px;
+  }
+
+  .unidade-container-mapa {
+    margin-top: 40px;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 285px) {
+  .unidade-container-dados .rua {
+    word-wrap: break-word;
+  }
+}
