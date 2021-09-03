@@ -4,7 +4,7 @@
 
 :root {
   --primary: #21233e;
-  --primaryLight: rgba(33, 35, 62, 0.3);
+  --primaryLight: #ABABB4;
   --secundary: #74d95e;
   --secundaryBold: #67c852;
   --base: #fff;
@@ -107,6 +107,39 @@ img {
 [data-semana].not-day::before {
   display: none;
 }
+
+.active-mobile {
+  display: flex !important;
+}
+
+.section-left, .section-right {
+  position: relative;
+  opacity: 0;
+}
+
+@keyframes translateLeft {
+  0% {
+    opacity: 0;
+    right: 5%;
+  }
+  100% {
+    opacity: 1;
+    right: 0%;
+  }
+}
+
+
+@keyframes translateRight {
+  0% {
+    opacity: 0;
+    right: -5%;
+  }
+  100% {
+    opacity: 1;
+    right: 0%;
+  }
+}
+
 
 @media (max-width: 350px) {
   .btns {
