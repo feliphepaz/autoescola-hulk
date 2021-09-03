@@ -3,10 +3,10 @@ import api from "./js/api.js";
 import handleFaq from "./js/handle-faq.js";
 import func from "./js/func.js";
 import mobile from "./js/mobile.js";
-import anima from "./js/anima.js";
+import anime from "./js/anime.js";
 
 mobile();
-anima();
+anime();
 
 if (document.body.classList.contains("home")) {
   slide();

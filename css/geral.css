@@ -112,31 +112,42 @@ img {
   display: flex !important;
 }
 
-.section-left, .section-right {
-  position: relative;
+[data-anime] {
   opacity: 0;
+  transition: .3s;
 }
 
-@keyframes translateLeft {
+[data-anime='left'] {
+  transform: translate3d(-20px, 0px, 0px);
+}
+
+[data-anime='left'].animate {
+  animation: left .5s forwards;
+}
+
+[data-anime='right'].animate {
+  animation: right .5s forwards;
+}
+
+@keyframes left {
   0% {
     opacity: 0;
-    right: 5%;
+    transform: translate3d(-30px, 0px, 0px);
   }
   100% {
     opacity: 1;
-    right: 0%;
+    transform: translate3d(0px, 0px, 0px);
   }
 }
 
-
-@keyframes translateRight {
+@keyframes right {
   0% {
     opacity: 0;
-    right: -5%;
+    transform: translate3d(30px, 0px, 0px);
   }
   100% {
     opacity: 1;
-    right: 0%;
+    transform: translate3d(0px, 0px, 0px);
   }
 }
 
