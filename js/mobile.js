@@ -5,7 +5,7 @@ export default function mobile() {
 
   btn.addEventListener('click', handleMobile);
 
-  function handleMobile() {
+  function handleMobile(e) {
     menu.classList.toggle('active-mobile');
     if (menu.classList.contains('active-mobile')) {
       btnImg.src = '/img/close.svg';

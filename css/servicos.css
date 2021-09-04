@@ -1,0 +1,31 @@
+.important-links {
+  margin-top: 60px;
+}
+
+.important-links-ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.important-links-ul li {
+  margin: 20px;
+}
+
+.important-links-ul li a {
+  padding: 40px;
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--base);
+  text-align: center;
+  border-radius: 20px;
+}
+
+.important-links-ul li a:hover {
+  background: var(--secundary);
+  transition: 0.3s;
+}

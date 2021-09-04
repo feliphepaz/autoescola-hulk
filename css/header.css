@@ -20,12 +20,8 @@
   display: flex;
 }
 
-.menu li {
-  margin-right: 40px;
-}
-
-.menu li:last-child {
-  margin-right: 0px;
+.menu li + li {
+  margin-left: 40px;
 }
 
 .menu li a,
@@ -34,6 +30,12 @@
   color: var(--base);
   font-weight: 700;
   text-transform: uppercase;
+  padding: 10px;
+}
+
+.menu li a:hover, .menu-active {
+  background: var(--secundary);
+  transition: 0.3s;
 }
 
 .item-menu-mobile {
@@ -62,7 +64,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1200px) {
   .menu {
     display: block;
     margin-right: 20px;
@@ -70,6 +72,7 @@
 
   .menu li + li {
     margin-top: 20px;
+    margin-left: 0px;
   }
 
   .btns {
@@ -93,11 +96,23 @@
     justify-content: center;
     position: absolute;
     right: 0px;
-    top: 90px;
-    width: 230px;
+    top: 80px;
+    width: 260px;
     z-index: 1;
     border-radius: 20px 0px 0px 20px !important;
     border-top: 2px solid var(--secundary);
+    animation: animaMenu 0.2s forwards;
+  }
+
+  @keyframes animaMenu {
+    0% {
+      opacity: 0;
+      transform: translate3d(30px, 0px, 0px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px);
+    }
   }
 
   .header .container nav .menu {
