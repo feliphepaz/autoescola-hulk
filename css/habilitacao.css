@@ -131,6 +131,7 @@
   display: none;
   color: var(--base);
   margin-top: 20px;
+  animation: down .2s forwards;
 }
 
 .block {

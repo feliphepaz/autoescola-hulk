@@ -130,6 +130,15 @@
   .btn-mobile {
     display: block;
   }
+
+  .menu li a:hover, .menu-active {
+    background: var(--secundary);
+    transition: 0.3s;
+  }
+
+  .item-menu-mobile a:hover {
+    color: var(--primary) !important;
+  }
 }
 
 @media (max-width: 640px) {

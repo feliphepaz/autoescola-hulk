@@ -1,0 +1,48 @@
+.video-home {
+  margin-bottom: 145px;
+}
+
+.video-midia {
+  width: 60%;
+}
+
+.video-midia video {
+  width: 100%;
+}
+
+.video-text {
+  width: 40%;
+  margin-left: 100px;
+}
+
+.video-text .title {
+  max-width: 100%;
+}
+
+.video-text .text {
+  margin-bottom: 20px !important;
+}
+
+.video-text .btn-a .btn {
+  max-width: 200px !important;
+}
+
+@media (max-width: 920px) {
+  .video-home {
+    flex-direction: column;
+  }
+
+  .video-text {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 0px;
+  }
+
+  .video-text .title {
+    max-width: 100%;
+  }
+
+  .video-midia {
+    width: 100%;
+  }
+}
