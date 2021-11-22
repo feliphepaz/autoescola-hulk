@@ -33,7 +33,7 @@
   padding: 10px;
 }
 
-.menu li a:hover, .menu-active {
+.menu li a:hover, .menu-active, .menu-footer li a:hover {
   background: var(--secundary);
   transition: 0.3s;
 }
@@ -43,7 +43,7 @@
 }
 
 .item-menu-mobile a {
-  color: var(--secundary) !important; 
+  color: var(--secundary); 
 }
 
 .btn-mobile {
@@ -133,6 +133,12 @@
 
   .menu li a:hover, .menu-active {
     background: var(--secundary);
+    transition: 0.3s;
+  }
+  
+  .menu-active-contact {
+    background: var(--secundary);
+    color: var(--base) !important;
     transition: 0.3s;
   }
 

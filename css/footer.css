@@ -21,19 +21,23 @@
 }
 
 .data-footer > a {
-  display: block;
+  display: flex;
+  align-items: center;
   color: var(--base);
   text-decoration: none;
-  margin-top: 10px;
+  height: 48px;
 }
 
 .social-footer {
   display: flex;
-  margin-top: 10px;
 }
 
-.social-footer a + a {
-  margin-left: 10px;
+.social-footer a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  margin-bottom: -10px;
 }
 
 .footer .container {

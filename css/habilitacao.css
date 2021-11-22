@@ -197,6 +197,13 @@
   }
 }
 
+@media (max-width: 500px) {
+    .step-content .title {
+        max-width: 100%;
+        word-break: break-all;
+    }
+}
+
 @media (max-width: 400px) {
   .step-content {
     margin-left: 40px;

@@ -129,6 +129,17 @@ img {
   animation: right .5s forwards;
 }
 
+.h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.3em;
+  background: var(--primary);
+  color: var(--base);
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
 @keyframes down {
   0% {
     opacity: 0;

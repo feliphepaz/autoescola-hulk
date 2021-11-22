@@ -1,27 +1,44 @@
 <?php
+require("PHPMailer-master/src/PHPMailer.php");
+require("PHPMailer-master/src/SMTP.php");
 
 if(isset($_POST['email']) && !empty($_POST['email'])) {
 
-$name = addslashes($_POST['name']);
-$email = addslashes($_POST['email']);
-$tel = addslashes($_POST['tel']);
-$message = addslashes($_POST['message']);
+$name = isset($_POST['name']) ? $_POST['name'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$tel = isset($_POST['tel']) ? $_POST['tel'] : '';
+$message = isset($_POST['message']) ? $_POST['message'] : '';
 
-$to = "feliphe.s.paz@gmail.com";
-$subject = "Contato - Hulk";
-$body = "Nome: ".$name. "\r\n".
-        "E-mail: ".$email. "\r\n".
-        "Telefone: ".$tel. "\r\n".
-        "Mensagem: ".$message;
-$header = "From:".$email."\r\n".
-            "Reply-To:".$email."\r\n".
-            "X=Mailer:PHP/".phpversion();
-
-if(mail($to,$subject,$body,$header)){
-  echo("O e-mail foi enviado com sucesso");
-}else{
-  echo("O e-mail não pode ser enviado");
+ $mail = new PHPMailer\PHPMailer\PHPMailer();
+ $mail->IsSMTP();
+ $mail->SMTPDebug = 1;
+ $mail->SMTPAuth = true;
+ $mail->SMTPSecure = 'ssl';
+ $mail->Host = "smtp.titan.email";
+ $mail->Port = 465;
+ $mail->IsHTML(true);
+ $mail->Username = "contato@autoescolahulk.com.br";
+ $mail->Password = "hulk019@123";
+ $mail->SetFrom("contato@autoescolahulk.com.br", $name);
+ $mail->Subject = "Contato - Hulk";
+ $mail->Body = "
+ Nome: $name
+ <br>
+ E-mail: $email
+ <br>
+ Telefone: $tel
+ <br>
+ Mensagem: $message
+ <br>
+ ";
+ $mail->addAddress("contato@autoescolahulk.com.br");
+ $mail->ClearReplyTos();
+ $mail->addReplyTo($email, $name);
+ $mail->CharSet = 'UTF-8';
+  if(!$mail->Send()) {
+      echo "Mailer Error: " . $mail->ErrorInfo;
+  } else {
+      echo "Mensagem enviada com sucesso";
+  }
 }
-}
-
 ?>

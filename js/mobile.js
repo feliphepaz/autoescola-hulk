@@ -8,9 +8,9 @@ export default function mobile() {
   function handleMobile(e) {
     menu.classList.toggle('active-mobile');
     if (menu.classList.contains('active-mobile')) {
-      btnImg.src = '/img/close.svg';
+      btnImg.src = 'img/close.svg';
     } else {
-      btnImg.src = '/img/open.svg';
+      btnImg.src = 'img/open.svg';
     }
   }
 }

@@ -59,7 +59,7 @@ export default function api(postsNumber) {
   }
 
   const token =
-    "IGQVJYZAU9yc1lKc3JVb2FtYS1nbTkyTFJ0bnB5cHdJTWhQNnpqN0lNSGlsMV9DWEphdWM0UVZAmbEs3N3JiejhaMGh5cWhqRlRmb01YYUNVQldXTnZALU0s2SHpRUEdXRjBPVGtpMFZAzVDlkMms3MXJaVwZDZD";
+    "IGQVJVdWF6d1g1R1BYVFdSelJkM0dFM1pxOFhaOHBmd0pDOGg2Yy1NTmllbkxnRGNOYnpYOHFPX0txNnA0NDN2SXAyQTczRW5FaFp4LUh0RDNvRG9JQkFwblRVZAXJfMjYtOTZAKYm82cTdaOGxOTnRLRgZDZD";
 
   async function fetchInsta() {
     textInsta.forEach((txt) => {
@@ -92,4 +92,9 @@ export default function api(postsNumber) {
   }
 
   fetchInsta();
+
+  const imgOfPost = document.querySelectorAll('.slide-insta li a img');
+  imgOfPost.forEach((img) => {
+    img.setAttribute('alt', 'Imagem do Post da Autoescola Hulk');
+  })
 }
